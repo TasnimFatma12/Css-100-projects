@@ -1,0 +1,141 @@
+html, body {
+  background: #333;
+  overflow: hidden;
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vmin;
+  height: 80vmin;
+  background: #333;
+  transform: translate(-50%, -50%) scale(1.5)
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
+  clip-path: polygon(-100% -100%, 50% -100%, 50% 200%, -100% 200%);
+}
+
+.cartoon div.v1 {
+  clip-path: polygon(50% -100%, 50% 200%, 200% 200%, 200% -100%);
+}
+
+.cartoon div.h1 {
+  clip-path: polygon(-100% -100%, 200% -100%, 200% 50%, -100% 50%);
+}
+
+.cartoon div.h2 {
+  clip-path: polygon(-100% 50%, 200% 50%, 200% 200%, -100% 200%);
+}
+
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.neck {
+  top: 25%;
+  left: 60%;
+  width: 15%;
+  height: 35%;
+  background: white;
+}
+
+.head {
+  top: 25%;
+  left: 61%;
+  width: 13%;
+  height: 18%;
+  background: white;
+  transform-origin: top center;
+  transform: rotate(-35deg);
+  box-shadow: -1vmin 2vmin 1vmin #333;
+}
+
+.body {
+  width: 35%;
+  height: 30%;
+  background: white;
+  top: 30%;
+  left: 32%;
+}
+
+.leg {
+  height: 38%;
+  background: white;
+  top: 42%;
+  box-shadow: -1vmin 5vmin 1vmin #333;
+  width: 13%;
+  left: 61%;
+}
+
+.leg-back {
+  width: 20%;
+  height: 20%;
+  background: white;
+  top: 45%;
+  left: 21.5%;
+  box-shadow: 0.5vmin 3vmin 1vmin #333;
+}
+
+.leg-bottom {
+  width: 12%;
+  height: 20%;
+  background: white;
+  top: 60%;
+  left: 28%;
+}
+
+.tail {
+  width: 10%;
+  height: 10%;
+  background: white;
+  top: 35%;
+  left: 26.5%;
+  transform-origin: bottom center;
+  transform: rotate(-35deg);
+}
+
+.ear {
+  width: 8%;
+  height: 8%;
+  background: white;
+  top: 24%;
+  left: 58%;
+  transform: rotate(55deg);
+  box-shadow: -0.25vmin 1.5vmin 0.5vmin #333;
+}
+
+.nose {
+  width: 3%;
+  height: 3%;
+  background: black;
+  top: 37%;
+  left: 75.5%;
+  transform: rotate(-35deg);
+}
+
+.ubre {
+  top: 50%;
+  left: 32%;
+  width: 15%;
+  height: 15%;
+  background: pink;
+}
