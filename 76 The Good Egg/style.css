@@ -1,0 +1,195 @@
+html, body {
+  background: #db86; 
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.egg {
+  width: 60%;
+  height: 85%;
+  background: #f007;
+  border-radius: 100% / 130% 130% 70% 70%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #dabb8d;
+  background: linear-gradient(135deg, #dabb8d, #caa672);
+}
+
+.leg {
+  width: 4%;
+  height: 15%;
+  border-right: 0.5vmin solid;
+  border-bottom: 0.5vmin solid;
+  top: 83%;
+  left: 41%;
+  transform-origin: bottom right;
+  transform: skewY(-30deg);
+}
+.leg + .leg {
+  left: auto;
+  right: 45%;
+  top: 84%;
+  transform: scaleX(-1) skewY(-30deg);
+}
+
+.arm {
+  height: 10%;
+  width: 5%;
+  border-left: 0.5vmin solid;
+  top: 73.5%;
+  left: 28%;
+}
+
+.arm::after {
+  width: 80%;
+  height: 19%;
+  border-right: 0.7vmin solid;
+  border-bottom: 0.5vmin solid;
+  transform-origin: bottom right;
+  transform: rotate(-16deg) skewX(55deg);
+  top: 82%;
+  left: -80%;
+}
+
+.arm::before {
+  width: 70%;
+  height: 25%;
+  border-top: 0.5vmin solid;
+  border-left: 0.5vmin solid;
+  transform: rotate(75deg) skewX(40deg);
+  top: 105%;
+  left: -60%;
+  top: calc(105% + 0.5vmin);
+  left: calc(-60% + 0.25vmin)
+}
+
+.arm + .arm {
+  transform: scaleX(-1);
+  left: auto;
+  right: 28.5%;
+}
+.arm + .arm::after {
+  transform: rotate(-90deg) skewX(60deg);
+  top: 75%;
+  left: -82%;
+}
+
+.arm + .arm::before {
+  width: 80%;
+  height: 35%;
+  transform: rotate(65deg);
+  top: 100%;
+  left: -70%;
+  top: calc(100% + 0.5vmin);
+  left: calc(-70% + 0.25vmin)
+}
+
+.eye {
+  width: 31%;
+  height: 21%;
+  background: #fff;
+  top: 58%;
+  left: 10%;
+  box-shadow: 0 7vmin 3vmin -3vmin #f986;
+}
+
+.eye::after {
+  width: 7vmin;
+  height: 7vmin;
+  border-radius: 50%;
+  background: #222;
+  right: 16%;
+  top: 27%;
+  box-shadow: 0 0 0 1.25vmin #6ba;
+}
+
+.eye::before {
+  width: 0.5vmin;
+  height: 0.5vmin;
+  background: #0001;
+  color: #0001;
+  border-radius: 50%;
+  top: 110%;
+  left: 50%;
+  box-shadow: -1.5vmin -0.125vmin 0 0.05vmin, -3.5vmin -0.5vmin 0 -0.05vmin, 0.75vmin 0.75vmin 0 -0.07vmin, -0.5vmin 1vmin, -2.5vmin 1.24vmin, -4.5vmin 0.5vmin;
+}
+
+.eye + .eye {
+  top: 59%;
+  width: 31.6%;
+  transform: scaleX(-1) rotate(-14deg);
+  left: auto;
+  right: 10%;
+  box-shadow: -2vmin 7vmin 3vmin -3vmin #f986;
+}
+
+.eye + .eye::before {
+  left: 45%;
+}
+
+.mouth {
+  width: 3vmin;
+  height: 3vmin;
+  border: 0.4vmin solid transparent;
+  border-bottom: 0.4vmin solid;
+  border-right: 0.4vmin solid;
+  transform: translate(-50%, 0) rotate(45deg);
+  top: 72%;
+  left: 49.6%;
+}
+.glasses {
+  width: 6%;
+  height: 1.25%;
+  background: #1d0d07;
+  transform: translate(-50%, 0) rotate(2deg);
+  top: 56.5%;
+  left: 50%;
+}
+
+.glasses::after,
+.glasses::before {
+  width: 25vmin;
+  height: 25vmin;
+  border-radius: 50%;
+  border: 1.25vmin solid #1d0d07;
+  border-top: 1vmin solid #1d0d07;
+  border-bottom: 0.8vmin solid #1d0d07;
+  transform: translate(-100%, -45%);
+}
+
+.glasses::after {
+  transform: translate(0, -45%) rotate(-30deg);
+  left: 90%;
+  border-top: 0.75vmin solid #1d0d07;
+  border-bottom: 0.8vmin solid #1d0d07;
+}

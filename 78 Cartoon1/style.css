@@ -1,0 +1,243 @@
+html, body {
+  overflow: hidden;
+  background: #8a46;
+}
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+.cartoon {
+  --fur: #222;
+  --skin: #eee;
+  --nose: #c00;
+  --shirt: #ace;
+  --pants: #69c;
+}
+
+.head {
+  width: 30%;
+  height: 38%;
+  background: var(--skin);
+  border-radius: 100% / 70% 70% 120% 120%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 7vmin 0 4vmin var(--fur);
+}
+
+.head::before {
+  width: 110%;
+  height: 40%;
+  background: var(--skin);
+  border-radius: 50%;
+  bottom: 0%;
+  left: -5%;
+}
+
+.eye {
+  width: 40%;
+  height: 60%;
+  background: var(--skin);
+  top: 15%;
+  left: 10%;
+  box-shadow: 9.66vmin 0 var(--skin);
+}
+
+.eye::after {
+  width: 3vmin;
+  height: 3vmin;
+  background: var(--skin);
+  box-shadow: inset 0.75vmin -0.75vmin 0 1vmin var(--fur), 8.75vmin -0.75vmin 0 -1vmin var(--skin), 8vmin 0 var(--fur);
+  border-radius: 50%;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.nose {
+  width: 25%;
+  height: 12%;
+  background: var(--nose);
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.mouth {
+  width: 70%;
+  height: 30%;
+  border: 0.125vmin solid transparent;
+  border-bottom: 0.5vmin solid var(--fur);
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ear {
+  width: 50%;
+  height: 40%;
+  top: -30%;
+  left: -10%;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(-10deg);
+  box-shadow: inset -3.5vmin 0 var(--fur);
+  overflow: hidden;
+}
+
+.ear::after {
+  width: 100%;
+  height: 40%;
+  background: var(--fur);
+  border-radius: 50%;
+  left: 20%;
+  top: -5%;
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-15deg);
+  left: 65%;
+  top: -32%;
+}
+.body {
+  height: 31%;
+  width: 8%;
+  background: var(--shirt);
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.body::before {
+  width: 30%;
+  height: 100%;
+  left: -20%;
+  background: var(--shirt);
+  transform: skewX(-3deg);
+  transform-origin: bottom right;
+}
+
+.body::after {
+  width: 30%;
+  height: 100%;
+  right: -20%;
+  background: var(--shirt);
+  transform: skewX(3deg);
+  transform-origin: bottom left;
+}
+
+.shorts {
+  width: 10%;
+  height: 5%;
+  background: var(--pants);
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.shorts::before {
+  width: 60%;
+  height: 490%;
+  background: var(--pants);
+  transform-origin: top left;
+  transform: skewX(-5deg);
+}
+
+.shorts::after {
+  right: 0;
+  width: 60%;
+  height: 490%;
+  background: var(--pants);
+  transform-origin: top right;
+  transform: skewX(5deg);
+}
+.shoe {
+  width: 9%;
+  height: 4%;
+  background: var(--fur);
+  border-radius: 100% 50% 0 0;
+  bottom: 0;
+  left: 40%;
+  transform: skewX(-3deg);
+}
+
+.shoe + .shoe {
+  left: auto;
+  right: 40%;
+  transform: scaleX(-1) skewX(-3deg);
+}
+
+.sleeves {
+  width: 7%;
+  height: 7%;
+  background: var(--shirt);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sleeves::before,
+.sleeves::after {
+  width: 100%;
+  height: 200%;
+  background: var(--shirt);
+  transform: rotate(30deg);
+  left: -50%;
+  top: -20%;
+}
+
+.sleeves::after {
+  transform: rotate(-40deg);
+  left: 50%;
+}
+
+.arms {
+  width: 23%;
+  height: 30%;
+  border: 3vmin solid var(--fur);
+  border-bottom: 2vmin solid transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arms::after {
+  width: 4.8vmin;
+  height: 4.8vmin;
+  background: var(--fur);
+  border-radius: 50%;
+  top: 82%;
+  left: 70%;
+}
+
+.hands {
+  width: 6%;
+  height: 6%;
+  background: var(--fur);
+  top: 73%;
+  left: 42%;
+}

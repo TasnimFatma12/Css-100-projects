@@ -1,0 +1,267 @@
+html, body {
+  overflow: hidden;
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.25vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --bg: #fff;
+  --skin: #fdc;
+  --light: #ffe;
+  --dark: #f002;
+  --shirt: #eee;
+}
+
+.face {
+  width: 35%;
+  height: 40%;
+  border-radius:  100% 50% 100% 30%;
+  transform: translate(-50%, 0) rotate(-30deg);
+  top: 10%;
+  left: 50%;
+  background: var(--skin);
+  box-shadow: inset 3vmin 1vmin var(--light);
+}
+
+.face::after {
+  width: 7vmin;
+  height: 5vmin;
+  background: var(--skin);
+  top: 86%;
+  left: 44.25%;
+  transform: skew(-20deg)
+}
+
+.nose {
+  width: 4%;
+  height: 12%;
+  border-left: 0.25vmin solid;
+  border-bottom: 0.25vmin solid;
+  transform: skewX(-10deg) skewY(-5deg) rotate(-5deg);
+  top: 28%;
+  left: 42%;
+  background-image: linear-gradient(75deg, var(--dark), transparent 50%);
+  box-shadow: -1.5vmin 0.75vmin var(--skin)
+}
+
+.mouth {
+  border-color: transparent;
+  border-bottom: 0.25vmin solid;
+  width: 11%;
+  height: 6%;
+  transform: rotate(-12deg);
+  top: 39%;
+  left: 40%;
+}
+
+.mouth::after {
+  width: 45%;
+  height: 50%;
+  border: 0.25vmin solid transparent;
+  border-right: 0.25vmin solid;
+  border-radius: 50%;
+  top: 75%;
+  right: 7%;
+  transform: rotate(-20deg);
+}
+
+.eye {
+  width: 1vmin;
+  height: 1vmin;
+  top: 29.25%;
+  left: 37%;
+  background: white;
+}
+
+.eye + .eye {
+  left: 49%;
+  top: 28.5%;
+}
+
+.ear {
+  width: 9%;
+  height: 13%;
+  border-left-color: transparent;
+  top: 26%;
+  left: 60%;
+  transform: rotate(1deg);
+  background: var(--skin);
+  box-shadow: inset -1vmin 0.5vmin var(--light)
+}
+
+.neck {
+  width: 15%;
+  height: 20%;
+  border-left: 0.25vmin solid;
+  background-image:
+    linear-gradient(-50deg, transparent 58%, var(--dark) 0),
+    linear-gradient(-95deg, transparent 10%, black 11%, var(--skin) 11.75%);
+  top: 39%;
+  left: 52%;
+  transform: rotate(-5deg)
+}
+
+.eyebrow {
+  width: 8%;
+  height: 5%;
+  border: 0.25vmin solid transparent;
+  border-top: 0.25vmin solid;
+  top: 25%;
+  left: 32.5%;
+  transform: rotate(-6deg);
+}
+
+.eyebrow + .eyebrow {
+  width: 9%;
+  left: 45%;
+  top: 23.5%;
+}
+
+.shirt-neck {
+  width: 18%;
+  height: 7%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.25vmin solid;
+  top: 52%;
+  left: 51%;
+  transform: rotate(-7deg);
+  box-shadow: 0 2vmin var(--bg);
+}
+
+.shoulder {
+  width: 26%;
+  height: 5%;
+  border-radius: 100%;
+  border: 0.25vmin solid transparent;
+  border-top: 0.25vmin solid;
+  top: 57.25%;
+  left: 65.6%;
+  transform: rotate(10deg);
+}
+
+.shoulder + .shoulder {
+  width: 22%;
+  height: 4%;
+  left: 32.75%;
+  top: 60.5%;
+  transform: rotate(-20deg);
+}
+
+.sleeve-1 {
+  height: 15vmin;
+  border-right: 0.25vmin solid;
+  transform: rotate(20deg);
+  top: 64.5%;
+  left: 30.75%;
+}
+
+.laptop {
+  width: 45%;
+  height: 30%;
+  transform: skewX(10deg);
+  background: #ccc;
+  bottom: 1vmin;
+  border-radius: 0.5vmin;
+}
+
+.laptop::after {
+  width: 135%;
+  height: 1vmin;
+  top: 100%;
+  top: calc(100% + 0.25vmin);
+  border: 0.25vmin solid;
+  background: #ccc;
+  transform: skewX(-10deg);
+  box-shadow: inset -13vmin 0 #fff7
+}
+
+.laptop::before {
+  width: 4vmin;
+  height: 4vmin;
+  border-radius: 50%;
+  background: #fff7;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+
+.sleeve-2 {
+  width: 15%;
+  height: 20%;
+  border-top: 0.25vmin solid transparent;
+  border-radius: 0 0 100% 100% / 30%;
+  transform: rotate(-20deg) skewY(-5deg);
+  top: 63%;
+  left: 79.5%;
+  background: var(--shirt)
+}
+
+.sleeve-2::after {
+  width: 0.25vmin;
+  height: 5vmin;
+  background: var(--shirt);
+  top:-0.5vmin;
+  left: -0.25vmin;
+}
+
+.arm-2 {
+  width: 12%;
+  height: 26%;
+  border-top: 0.25vmin solid transparent;
+  border-radius: 0 0 100% 100% / 50%;
+  transform: rotate(-20deg) skewY(-5deg);
+  top: 74.25%;
+  left: 86%;
+  background: var(--skin)
+}
+
+.forearm {
+  width: 40%;
+  height: 10%;
+  background: var(--skin);
+  bottom: 0;
+  left: 55%;
+  border: 0.25vmin solid;
+  border-right: 0 solid transparent;
+  border-radius: 100% 0 0 0;
+  clip-path: polygon(0% 0%, 99% 0%, 99% 100%, 0% 100%);
+}
+
+.shirt {
+  width: 60%;
+  height: 38.5%;
+  background: var(--shirt);
+  border-radius: 100% 100% 0 0 / 70% 20% 0 0;
+  bottom: 0;
+  left: 30%;
+  transform: rotate(-6deg);
+}
